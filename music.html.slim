@@ -1,0 +1,53 @@
+- @current = :music
+.row
+  .span8
+    h1 Music and Videos
+    p.lead A selection of music and videos featuring Carol Kappus on Celtic Harp.
+    .span6
+      ' <audio preload></audio>
+      ol
+        /
+          - Dir.glob("music/*.mp3").each do |f|
+          li
+            a href="#{f}" #{f.match(/.+\/(.+?)\.mp3/)[1].split("_").join(" ").split(/(\W)/).map(&:capitalize).join}
+        - IO.read("music/info.txt").split("\n").each do |s|
+          - (file, title) = s.split(", ")
+          li.song
+            a href="#" data-src="music/#{file}" #{title}
+  .span4
+    h2 Events
+    p.lead See the <a href="events.html">events calendar</a> for a chance to see Carol perform live.
+    h2 Performances
+    p.lead Check out the <a href="performance.html">performance</a> page to learn more about the types of performances Carol gives.
+    h2 Lessons
+    p.lead Want to learn to play the harp, yourself? Learn more about Carol's <a href="lessons.html">harp lessons</a>.
+.row
+  .span8
+    br
+.row
+  .span8
+    h3.vid_title The Parting Glass - Mo Ghille Mear
+    | <iframe width="100%" height="480" src="https://www.youtube.com/embed/xeyc2ZgxPTI" frameborder="0" allowfullscreen></iframe>
+.row
+  .span4
+    h3.vid_title A jazzier Danny Boy
+    | <iframe height="515" src="https://www.youtube.com/embed/wW6dG4qna1A" frameborder="0" allowfullscreen></iframe>
+  .span4
+    h3.vid_title Sìne Bhan - Fair Jean - A sweet Gaelic love song
+    | <iframe height="515" src="https://www.youtube.com/embed/gOlmGIK9Oeo" frameborder="0" allowfullscreen></iframe>
+.row
+  .span4
+    h3.vid_title An Cluinn Thu Mi Mo Nighean Donn
+    | <iframe height="515" src="http://www.youtube.com/embed/IjUie2p_vy0" frameborder="0" allowfullscreen></iframe>
+  .span6
+    h3.vid_title Danny Boy
+    | <iframe height="515" src="http://www.youtube.com/embed/Vt_0E_P30Z0" frameborder="0" allowfullscreen></iframe>
+.row
+  .span12
+    h3.vid_title Ann Arbor Celtic Harpers
+    | <iframe width="853" height="480" src="http://www.youtube.com/embed/9DC2m6a7lNY" frameborder="0" allowfullscreen></iframe>
+    p A clip from a Valentine's Day concert, 2011
+.row
+  .span12
+    h3.vid_title Ann Arbor Keltic Harpers - Kay Brown & Carol Kappus
+    | <iframe width="853" height="480" src="http://www.youtube.com/embed/nKYsTgPI-Jo" frameborder="0" allowfullscreen></iframe>

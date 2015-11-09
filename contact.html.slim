@@ -1,0 +1,40 @@
+- @current = :contact
+.row
+  .span8
+    h1 Contact Carol
+    address
+    p.lead Curious about starting harp lessons or booking a celtic harp performance or workshop? Please fill in the form below to contact Carol directly.
+    /h2 Contact Form
+    / OLD FORM.... (used PHP)
+    /
+      form method="post" action="send.php"
+        fieldset
+          label Your Name
+          input.required type="text" name="name"
+          label Your Email Address
+          input.required.email type="text" name="email"
+          label
+            ' Your Telephone Number
+            .muted (optional)
+          input type="text" name="phone"
+          label Your Message
+          textarea.required rows="20" cols="80" name="message"
+          br
+          /
+            input.required type="checkbox" name="human"
+           label.right "Please confirm that you're human"
+            br
+          button.btn.btn-primary.btn-large type="submit" Send Message
+          '
+          button.btn.btn-large type="reset" Cancel
+    /NEW FORM (uses Wufoo (peterk-AT-peterkappus.com) so we can host on S3)
+    |
+      <iframe height="650" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://peterkappus.wufoo.com/embed/zkc24yn0xx6g95/"><a href="https://peterkappus.wufoo.com/forms/zkc24yn0xx6g95/">Fill out my Wufoo form!</a></iframe><div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"></div>
+  .span4.side-img
+    img src="img/urquhart.jpg"
+    br
+    small Urquhart Castle; photo by <a href="http://www.flickr.com/photos/9255261@N07/4811187263/">Freimut</a>
+    /
+      img src="img/hills-martin_de_lusenet.jpg"
+      br
+      small Photo by <a href="http://www.flickr.com/photos/martindelusenet/8040987596/in/photostream/">Martin de Lusenet</a>

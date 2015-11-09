@@ -1,0 +1,27 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand class="#{(@current == :home ? 'current' : '')}"  href='index.html'
+        | Carol Kappus
+      .nav-collapse.collapse
+        ul.nav
+          li class="#{(@current == :about ? 'current' : '')}"
+            a href='about.html' About
+          li class="#{(@current == :store ? 'current' : '')}"
+            a href='store.html' Store
+          li class="#{(@current == :events ? 'current' : '')}"
+            a href='events.html' Calendar
+          li class="#{(@current == :performance ? 'current' : '')}"
+            a href='performance.html' Performances
+          li class="#{(@current == :lessons ? 'current' : '')}"
+            a href='lessons.html' Lessons &amp; Workshops
+          li class="#{(@current == :music ? 'current' : '')}"
+            a href='music.html' Music & Videos
+          li class="#{(@current == :harps ? 'current' : '')}"
+            a href='harps.html' Harps
+          li class="#{(@current == :contact ? 'current' : '')}"
+            a href='contact.html' Contact

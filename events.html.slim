@@ -1,0 +1,28 @@
+- @current = :events
+- require 'open-uri' #for loading google doc
+- spread_sheet_url="https://docs.google.com/spreadsheets/d/1jJgKcQ3V79yT1_NaIgAqfu6Fr5yjOb7vBvIKfPTBMeY/export?gid=0&single=true&format=tsv"
+- spread_sheet = open(spread_sheet_url) {|f| f.read }
+
+/ Uncomment this line to use a local copy
+- #spread_sheet = IO.read('events.src.txt')
+
+- events = spread_sheet.split("\n").map!{|evt| evt.split("\t")}
+- #remove the header row
+- #puts events.length
+- events.shift
+.row
+  .span8.events
+    .row
+      .span8.events
+        h1 Harp Events and Appearances
+        p.lead
+          ' Carol performs regularly throughout Michigan and the Greater Midwest with frequent appearances in Scotland. For more information, or to book your own event,
+          a href='/contact.html' please get in touch
+          '.
+        == render '_events_in_year.html.slim', :locals => { :year => 2015, :events => events }
+        == render '_events_in_year.html.slim', :locals => { :year => 2014, :events => events }
+        == render '_events_in_year.html.slim', :locals => { :year => 2013, :events => events }
+
+  .span4
+    a href="contact.html"
+      img src="img/teaching.jpg"

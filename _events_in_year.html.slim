@@ -1,0 +1,44 @@
+- require 'uri'
+- @cols = 2
+- @events = events.select{|e| e[0] =~ /#{year}/}
+.row
+	.span8.events
+		h3.line Events in #{year}
+		- i = 0
+		/ get all events in the current year, then sort by date in reverse cron order
+		- @events.sort{|a,b| Date.parse(b[1]) <=> Date.parse(a[1])}.each do |event|
+			- #hacky!
+			- if(i % @cols == 0)
+				'<div class="row" id="row">
+			.span4
+				p
+					/ Title
+					b #{event[3]}
+					br
+					/ Date
+					i #{event[0]}
+					/ Time
+					- if !event[2].to_s.empty?
+						i, #{event[2]}
+					br
+					/ Blurb
+					- if !event[4].to_s.empty?
+					  = event[4]
+					  br
+					/ Venue Name
+					- if !event[5].to_s.empty?
+					  '#{event[5]}
+					  br
+					/ Venue Address
+					- if !event[6].to_s.empty?
+					  '#{event[6]}
+					  a href="http://maps.google.com?q=#{URI.escape(event[5])}" target="_blank" MAP &raquo;
+			 		  br
+					/ Learn More link
+					- if !event[7].to_s.strip.empty?
+					  a href="#{event[7]}" target="_blank" More Information &raquo;
+			  		  br
+				- #hacky close to our row, make sure we close after the last one...
+				- if(i % @cols == @cols-1 || i == @events.count-1)
+					'</div>
+				- i += 1
