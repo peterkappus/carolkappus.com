@@ -1,11 +1,11 @@
 - @current = :events
 - require 'open-uri' #for loading google doc
 - spread_sheet_url="https://docs.google.com/spreadsheets/d/1jJgKcQ3V79yT1_NaIgAqfu6Fr5yjOb7vBvIKfPTBMeY/export?gid=0&single=true&format=tsv"
-- spread_sheet = open(spread_sheet_url) {|f| f.read }
 
 / Uncomment this line to use a local copy
-- #spread_sheet = IO.read('events.src.txt')
+- spread_sheet = IO.read('events.src.txt')
 
+- spread_sheet = open(spread_sheet_url) {|f| f.read } unless spread_sheet
 - events = spread_sheet.split("\n").map!{|evt| evt.split("\t")}
 - #remove the header row
 - #puts events.length

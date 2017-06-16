@@ -6,8 +6,6 @@
       .span8
         p.lead Here you can purchase books of sheet music for original compositions and arrangements of traditional tunes for Celtic harp by Carol Kappus.
 
-
-
 ==render '_buy_bundle.html.slim'
 
 .row.book
@@ -15,8 +13,64 @@
     .row
       .span8
         h2
+          | The Parting Glass - Three Songs of Farewell
+          / sup  &nbsp; NEW!
+    .row.songs
+      .span8
+        p The Parting Glass contains three famous parting glass songs:
+        .row
+          .span6
+            h3 The Irish Parting Glass
+            p Arranged for voice and harp.
+            
+            h3 Here’s a Health to the Company
+            p Arranged for harp only and for harp and voice, Originally a Scottish tune but now sung on both sides of the water.
+            
+            h3 So Here’s to You
+            p Alan Bell’s famous tune, arranged for harp only and for harp and voice. You may know this tune a it is the tune that is always sung at the close of the Somerset Harp Festival.
+
+  ==render '_store_item.html.slim', :locals=> {:cover=>"parting_glass_small.jpg", :title =>"The Parting Glass - Three Songs of Farewell",:price=>10, :buy_button_code=>"-----BEGIN PKCS7-----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-----END PKCS7-----"}
+    
+.row.book
+  .span8
+    .row
+      .span8
+        h2
+          | Delicious Tunes from Scotland
+          / sup  &nbsp; NEW!
+    .row.songs
+      .span8
+        p Lyrics are included for all the tunes that have them, along with extensive notes about each song.
+        .row
+          .span4
+            ul
+              li A Pheigi a Ghraidh
+              li Ceud Soraidh, Ceud Fàilte
+              li Fil Ò Ro
+              li Griogal Cridhe
+              li Jock O’Hazeldean
+              li The Shearing
+          .span4
+            ul
+              li Tioram air Tìr
+              li The Valley of Strathmore
+              li Hector the Hero
+              li Sìne Bhàn
+              li Highland Cathedral
+              li Wendle’s Wedding
+              li and a special secret bonus tune!
+
+
+  ==render '_store_item.html.slim', :locals=> {:cover=>"delicious_tunes_from_scotland_small.jpg", :title =>"Delicious Tunes from Scotland",:price=>12, :buy_button_code=>"-----BEGIN PKCS7-----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-----END PKCS7-----"}
+
+
+.row.book
+  .span8
+    .row
+      .span8
+        h2
           | Irresistible Irish Tunes
-          sup  &nbsp; NEW!
+          / sup  &nbsp; NEW!
         p Nine beautiful arrangements from Carol’s Music of Ireland show.
     .row.songs
       .span8
@@ -53,7 +107,7 @@
             p A mournful lament and rebel tune about the Easter Uprising of 1916.
 
   .span4
-    img.rounded.cover src="img/irish_tunes_cover.jpg"
+    img.rounded.cover src="img/book_covers/irish_tunes_cover.jpg"
   .span12
     .well.center style="background: #bcd"
       .bg-primary
@@ -104,7 +158,7 @@
           li Sìne Bhàn
           li The Skye Boat Song
   .span4
-    img.rounded.cover src="img/songs_for_skye.jpg"
+    img.rounded.cover src="img/book_covers/songs_for_skye.jpg"
   .span12
     .well.center style="background: #bcd"
       .bg-primary
@@ -140,7 +194,7 @@
             b The Water is Wide,  Shall We Gather at the River, Shenandoah
             p A beautiful medely which can be used as a solo, or played by an ensemble.  Each tune can also be played individually.
   .span4
-    img.rounded.cover src="img/schlurpy.jpg"
+    img.rounded.cover src="img/book_covers/schlurpy.jpg"
     br
     br
 .row
