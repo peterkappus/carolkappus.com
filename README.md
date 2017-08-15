@@ -14,10 +14,16 @@ Clone and cd into directory
 
 Now find generated static website in public subfolder.
 
+### Docker Instructions
+
+- Install docker...
+- Run `docker-compose up` (should build and re-build files as required)
+
 ## TODO
 
 - Add a site map. Can this be auto generated?
 - Consider porting this site to Hugo or similar.
+
 
 ### Making paypal buttons:
 - Go [here](https://www.paypal.com/bm/cgi-bin/webscr?cmd=_singleitem-intro-outside).

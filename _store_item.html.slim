@@ -1,0 +1,16 @@
+
+.span4
+  img.rounded.cover src="img/book_covers/#{cover}"
+.span12
+  .well.center style="background: #bcd"
+    .bg-primary
+      h4 #{title}
+      h3 $#{price.to_s}.00
+      h5 + $3.50 postage anywhere in the USA
+      / paypal button
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="encrypted" value="#{buy_button_code}">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>

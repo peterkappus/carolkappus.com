@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#adopted from: https://medium.com/@fbzga/how-to-cache-bundle-install-with-docker-7bed453a5800
+
+bundle check || bundle install
+
+export LC_ALL=C.UTF-8
+bundle exec stasis -d
+#bundle exec rails s -b 0.0.0.0
