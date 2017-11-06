@@ -28,9 +28,7 @@ Install s3cmd
 run `s3cmd sync -P public/ s3://bucketname/`
 (NOTE: the -P flag makes the files public)
 If you accidentally synch without this flag you can run `s3cmd setacl -Pr s3://bucketname/` to recursively make everyhting public
-
-## Troubleshooting
-Can'
+TROUBLESHOOTING: If you can't get s3cmd setup, try a network that doesn't need a proxy.
 
 ## TODO
 
