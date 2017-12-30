@@ -2,8 +2,11 @@ GEM
   remote: https://rubygems.org/
   specs:
     directory_watcher (1.4.1)
+    ffi (1.9.18)
     haml (4.0.5)
       tilt
+    rb-inotify (0.9.10)
+      ffi (>= 0.5.0, < 2)
     sass (3.2.19)
     slim (2.0.2)
       temple (~> 0.6.6)
@@ -21,7 +24,11 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  rb-inotify
   sass
   slim
   stasis
   tilt
+
+BUNDLED WITH
+   1.10.6

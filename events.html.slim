@@ -19,6 +19,7 @@
           ' Carol performs regularly throughout Michigan and the Greater Midwest with frequent appearances in Scotland. For more information, or to book your own event,
           a href='/contact.html' please get in touch
           '.
+        /== render '_events_in_year.html.slim', :locals => { :year => 2018, :events => events }
         == render '_events_in_year.html.slim', :locals => { :year => 2017, :events => events }
         == render '_events_in_year.html.slim', :locals => { :year => 2016, :events => events }
         == render '_events_in_year.html.slim', :locals => { :year => 2015, :events => events }

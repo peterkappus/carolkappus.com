@@ -19,6 +19,11 @@ Now find generated static website in public subfolder.
 - Install docker...
 - Run `docker-compose up` (should build and re-build files as required)
 
+### Compiling the custom sass
+- Run `docker-compose run app bash`
+- Inside the container run `bundle && sass -w css/custom-styles.css.sass:css/custom-styles.css`
+- TODO: make this simpler and more automatic...
+
 ## TODO
 
 - Add a site map. Can this be auto generated?
