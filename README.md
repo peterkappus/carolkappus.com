@@ -1,23 +1,34 @@
-https://github.com/peterkappus/carolkappus.com
+# Carol Kappus website
+A static site for my mom.
 
-### Instructions
-
-Install stasis gem
-
-	gem install stasis
-
-Clone and cd into directory
-
-	git clone https://github.com/peterkappus/carolkappus.com.git
-	cd carolkappus.com
-	stasis -d
-
-Now find generated static website in public subfolder.
-
-### Docker Instructions
+## Setup using Docker
 
 - Install docker...
 - Run `docker-compose up` (should build and re-build files as required)
+
+
+### Local Setup
+Use this if docker doesn't work for you
+
+Install stasis gem
+
+	`gem install stasis`
+
+Clone and cd into directory
+
+	```git clone https://github.com/peterkappus/carolkappus.com.git
+	cd carolkappus.com
+	stasis -d
+```
+
+Now find generated static website in public subfolder and open it.
+
+## Deployment
+Install s3cmd
+run `s3cmd sync -P public/ s3://bucketname/`
+(NOTE: the -P flag makes the files public)
+If you accidentally synch without this flag you can run `s3cmd setacl -Pr s3://bucketname/` to recursively make everyhting public
+TROUBLESHOOTING: If you can't get s3cmd setup, try a network that doesn't need a proxy.
 
 ### Compiling the custom sass
 - Run `docker-compose run app bash`
