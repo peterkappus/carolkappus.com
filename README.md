@@ -35,6 +35,13 @@ TROUBLESHOOTING: If you can't get s3cmd setup, try a network that doesn't need a
 - Inside the container run `bundle && sass -w css/custom-styles.css.sass:css/custom-styles.css`
 - TODO: make this simpler and more automatic...
 
+### Watermarking images
+Use imagemagick:
+
+`convert -size 400x200 xc:none -font Arial -pointsize 25 -kerning 1 -gravity center -fill black -annotate 330x330+0+0 "SAMPLE" -fill white -annotate 330x330+2+2  "SAMPLE" WATERMARK_FILE.png`
+
+`composite -dissolve 20% -tile WATERMARK_FILE.png [INFILE] [OUTFILE]`
+
 ## TODO
 
 - Add a site map. Can this be auto generated?

@@ -2,7 +2,7 @@
 - require 'open-uri' #for loading google doc
 - spread_sheet_url="https://docs.google.com/spreadsheets/d/1jJgKcQ3V79yT1_NaIgAqfu6Fr5yjOb7vBvIKfPTBMeY/export?gid=1&single=true&format=tsv"
 
-/ Uncomment this line to use a local copy
+/ Comment out this line to use the google sheet version
 - spread_sheet = IO.read('events.src.txt')
 
 - spread_sheet = open(spread_sheet_url) {|f| f.read } unless spread_sheet
@@ -19,7 +19,7 @@
           ' Carol performs regularly throughout Michigan and the Greater Midwest with frequent appearances in Scotland. For more information, or to book your own event,
           a href='/contact.html' please get in touch
           '.
-        /== render '_events_in_year.html.slim', :locals => { :year => 2018, :events => events }
+        == render '_events_in_year.html.slim', :locals => { :year => 2018, :events => events }
         == render '_events_in_year.html.slim', :locals => { :year => 2017, :events => events }
         == render '_events_in_year.html.slim', :locals => { :year => 2016, :events => events }
         == render '_events_in_year.html.slim', :locals => { :year => 2015, :events => events }
