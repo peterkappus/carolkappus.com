@@ -5,8 +5,11 @@
   .well.center style="background: #bcd"
     .bg-primary
       h4 #{title}
-      h3 $#{price.to_s}.00
-      h5 + $3.50 postage anywhere in the USA
+      h3 $#{'%.2f' % price}
+      - if (shipping.to_i > 0) then
+        h5 + $#{ '%.2f' % shipping } postage anywhere in the USA
+      - else
+        h5 Digital download
       / paypal button
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_s-xclick">

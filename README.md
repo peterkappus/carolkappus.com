@@ -48,6 +48,13 @@ Use imagemagick:
 - Consider porting this site to Hugo or similar.
 
 
+### Making book covers:
+Take a screenshot of the PDF.
+Copy the resulting PNG from your deksop to `img/book_covers`
+Open Terminal...
+`convert <src.png> -resize 517x <out.jpg>`
+
+
 ### Making paypal buttons:
 - Go [here](https://www.paypal.com/bm/cgi-bin/webscr?cmd=_singleitem-intro-outside).
 - Scroll to the bottom and click "Create an HTML Form"
