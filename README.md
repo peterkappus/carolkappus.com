@@ -47,6 +47,11 @@ Use imagemagick:
 - Add a site map. Can this be auto generated?
 - Consider porting this site to Hugo or similar.
 
+### Updating the "Events" page.
+Go to the events google sheet (get URL in your google drive)
+Copy everything
+Paste it into `events.src.txt`
+Visit the events page and confirm everything is there
 
 ### Making book covers:
 Take a screenshot of the PDF.
